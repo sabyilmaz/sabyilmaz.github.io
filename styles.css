@@ -71,14 +71,14 @@ body {
 }
 
 .project {
-    padding: 20px;
+    padding: 8px 20px 20px 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0 0 5px #dba55e;
+    border-radius: 10px;
 }
 
 .project h2 {
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .project p {
@@ -98,7 +98,6 @@ body {
 section {
     padding: 4% 7% 5% 7%;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section h1 {
@@ -133,7 +132,7 @@ footer {
     text-align: center;
     justify-content: center;
     padding: 10px 0;
-    margin-left:10%;
+    margin-left:9%;
     color:slategray;
     width: 100%;
     bottom: 0;
@@ -151,7 +150,7 @@ footer a{
         padding:0;
     }
     .sidebar {
-        width: 100%;
+        width: auto;
         height: auto;
         position: relative;
         display: flex;
@@ -183,13 +182,15 @@ footer a{
     }
 
     .content {
-        width: 100%;
+        width: auto;
         margin-left:0;
         margin-right:0;
         font-size:12px;
+        padding:0;
     }
     section{
         margin-left:0;
+        width: auto;
     }
     .gif-container {
         margin-left: 0;
@@ -235,5 +236,7 @@ footer a{
         font-size:12px;
         display: flex;
         justify-content: center;
+        margin-left: 10%;
+        width: fit-content;
     }
 }
