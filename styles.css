@@ -143,11 +143,11 @@ footer a{
 }
 
 @media (max-width: 576px) {
-    body{
+    body {
         margin-right: 0;
         margin-left: 0;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
     }
     .sidebar {
         width: auto;
@@ -158,8 +158,7 @@ footer a{
         align-items: center;
         padding: 10px 0;
     }
-
-    .sidebar nav{
+    .sidebar nav {
         display: flex;
         justify-content: center;
     }
@@ -170,26 +169,23 @@ footer a{
         flex-wrap: wrap;
         gap: 15px;
     }
-
     .sidebar nav ul li {
         margin: 5px 0;
     }
-
     .sidebar img {
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
     }
-
     .content {
         width: auto;
-        margin-left:0;
-        margin-right:0;
-        font-size:12px;
-        padding:0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 12px;
+        padding: 0;
     }
-    section{
-        margin-left:0;
+    section {
+        margin-left: 0;
         width: auto;
     }
     .gif-container {
@@ -197,32 +193,28 @@ footer a{
         width: auto;
         height: auto;
     }
-
     table {
         width: 100%;
     }
-
     table, th, td {
         font-size: 12px;
         word-wrap: break-word;
     }
-
     table thead {
         display: none;
     }
-
     table tr {
         display: block;
         margin-bottom: 10px;
+        width: auto;
     }
-
     table td {
         display: block;
         text-align: right;
         padding-left: 50%;
         position: relative;
+        white-space: pre-wrap;
     }
-
     table td::before {
         content: attr(data-label);
         position: absolute;
@@ -232,8 +224,8 @@ footer a{
         font-weight: bold;
         text-align: left;
     }
-    footer p{
-        font-size:12px;
+    footer p {
+        font-size: 12px;
         display: flex;
         justify-content: center;
         margin-left: 10%;
