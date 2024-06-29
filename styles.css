@@ -207,7 +207,7 @@ footer a{
     }
 
     table thead {
-        display: none; /* Başlıkları gizler */
+        display: none;
     }
 
     table tr {
