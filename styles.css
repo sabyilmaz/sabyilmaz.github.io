@@ -2,8 +2,8 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
-    margin-right:13%;
-    background-color:#222;
+    margin-right: 14%;
+    background-color: #222;
 }
 
 .sidebar {
@@ -38,22 +38,24 @@ body {
 .content {
     margin-left: 200px;
     padding: 20px;
-    color:#fff;
+    padding-left: 6%;
+    color: #fff;
     background-color: #222;
 }
-.content h1{
-    color:#dba55e;
+
+.content h1 {
+    color: #dba55e;
     font-size: 30px;
 }
 
-#cv a{
-    color:#dba55e;
+#cv a {
+    color: #dba55e;
     text-decoration: none;
 }
 
 .gif-container {
     margin-left: 14%;
-    height: 100vh; 
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -110,36 +112,39 @@ table {
     margin-bottom: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
 }
 
-#projects a{
-    color:#dba55e;
+#projects a {
+    color: #dba55e;
     text-decoration: none;
 }
 
-#contact a{
-    color:#dba55e;
+#contact a {
+    color: #dba55e;
 }
 
 footer {
     text-align: center;
     justify-content: center;
     padding: 10px 0;
-    margin-left:9%;
-    color:slategray;
+    margin-left: 8%;
+    color: slategray;
     width: 100%;
     bottom: 0;
 }
 
-footer a{
-    color:#dba55e;
+footer a {
+    color: #dba55e;
 }
 
 @media (max-width: 576px) {
@@ -149,6 +154,7 @@ footer a{
         margin: 0;
         padding: 0;
     }
+
     .sidebar {
         width: auto;
         height: auto;
@@ -158,10 +164,12 @@ footer a{
         align-items: center;
         padding: 10px 0;
     }
+
     .sidebar nav {
         display: flex;
         justify-content: center;
     }
+
     #options {
         display: flex;
         flex-direction: row;
@@ -169,14 +177,17 @@ footer a{
         flex-wrap: wrap;
         gap: 15px;
     }
+
     .sidebar nav ul li {
         margin: 5px 0;
     }
+
     .sidebar img {
         width: 100px;
         height: 100px;
         margin-bottom: 10px;
     }
+
     .content {
         width: auto;
         margin-left: 0;
@@ -184,30 +195,39 @@ footer a{
         font-size: 12px;
         padding: 0;
     }
+
     section {
         margin-left: 0;
         width: auto;
     }
+
     .gif-container {
         margin-left: 0;
         width: auto;
         height: auto;
     }
+
     table {
         width: 100%;
     }
-    table, th, td {
+
+    table,
+    th,
+    td {
         font-size: 12px;
         word-wrap: break-word;
     }
+
     table thead {
         display: none;
     }
+
     table tr {
         display: block;
         margin-bottom: 10px;
         width: auto;
     }
+
     table td {
         display: block;
         text-align: right;
@@ -215,6 +235,7 @@ footer a{
         position: relative;
         white-space: pre-wrap;
     }
+
     table td::before {
         content: attr(data-label);
         position: absolute;
@@ -224,6 +245,7 @@ footer a{
         font-weight: bold;
         text-align: left;
     }
+
     footer p {
         font-size: 12px;
         display: flex;
