@@ -11,18 +11,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <div class="sidebar">
         <nav>
             <ul>
-                <li><a href="index.html"><img src="media/sab-picrew.png"></a></li>
+                <li><a href="index.html"><img src="media/sab-picrew.png" id="profile-image"></a></li>
                 <div id="options">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li><button id="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
                 </div>
             </ul>
         </nav>
@@ -32,12 +35,14 @@
         <section id="about">
             <h1>About Me</h1>
             <p>Hi there! My name is Sabri Yılmaz. I am a Computer Programming student at Izmir University of Economics.
-                </p><p>
+            </p>
+            <p>
                 Currently, I am enrolled in an Associate's degree program with the goal of transitioning into a
                 Bachelor's
                 degree in Computer Engineering through Turkey's "Dikey Geçiş Sınavı (DGS)". This transition is my
                 primary academic objective as I aim to deepen my knowledge and expertise in the field.
-                </p><p>
+            </p>
+            <p>
                 My journey into the world of programming began with a curiosity for how software works, and it has since
                 evolved into a deep commitment to learning the art of coding and problem-solving.</p>
             <p></p>
@@ -52,7 +57,8 @@
                 regularly engage with the latest industry trends, tools, and best practices to ensure that my knowledge
                 and skills remain current and relevant in the fast-paced field of technology.</p>
             </p>
-            <p>Nowadays, I am looking to an internship position because of my mandatory internship course at my university.
+            <p>Nowadays, I am looking to an internship position because of my mandatory internship course at my
+                university.
                 I am eager to apply my skills and enthusiasm in an internship position to contribute to
                 innovative projects and further my professional development. If you're interested in hiring me, check
                 out
@@ -77,31 +83,73 @@
 
         <section id="projects">
             <h1>Projects</h1>
-            <div class="project">
-                <h3>Guess the Game with Emojis</h3>
-                <p>I developed an interactive game using the Spring framework where users guess video games based on a
-                    set of five emojis which is serving from an SQL database. For more details, you can view my
-                    README.md
-                    in my GitHub repository.</p>
-                <p><strong>Technologies Used:</strong> Java, Spring Framework, MySQL, HTML, CSS, JavaScript</p>
-                <br>
-                <a href="https://github.com/sabvillainy/guess-the-game-with-emojis-backend" target="_blank">View on
-                    GitHub (Backend Repository)</a>
-                <br><br>
-                <a href="https://github.com/sabvillainy/guess-the-game-with-emojis-frontend" target="_blank">View on
-                    GitHub (Frontend Repository)</a>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="media/gtg.png" alt="Guess the Game with Emojis" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Guess the Game with Emojis</h3>
+                        <p class="project-description">Developed an interactive game where users try to guess which video game is represented by a set of 5 emojis. The project features user interaction and score tracking for an engaging experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sabvillainy/guess-the-game-with-emojis" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                            <a href="https://sabvillainy.github.io/guess-the-game-with-emojis/" target="_blank" class="demo-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="media/rsms.png" alt="Record Store Management System" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Record Store Management System</h3>
+                        <p class="project-description">Developed an inventory management system for both admins and
+                            employees. This is basically for editing products and employees, and processing purchases.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">WinForms</span>
+                            <span class="tech-tag">MSSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sabvillainy/record-store-management-system" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="media/mp.png" alt="Music Player" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Music Player</h3>
+                        <p class="project-description">Developed a Python-based music player with a Tkinter GUI,
+                            featuring user authentication, database integration, favorites, and robust audio management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sabvillainy/music-player" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Record Store Management System</h3>
-                <p>I developed an inventory management system for both admins and employees. This is basically for
-                    editing products and employees, and processing purchases. For more details, you can view my
-                    README.md
-                    in my GitHub repository.</p>
-                <p><strong>Technologies Used:</strong> C#, WinForms, MSSQL</p><br>
-                <a href="https://github.com/sabvillainy/record-store-management-system" target="_blank">View on
-                    GitHub</a>
-            </div><br>
-            <p>For more, visit my <b><a href="https://github.com/sabvillainy">GitHub</a></b>.</p>
+            <div class="projects-footer">
+                For detailed information about these projects, check out their README.md files, and visit my <a
+                    href="https://github.com/sabvillainy">GitHub</a> account to see my other projects.
+            </div>
         </section>
 
         <section id="contact">
@@ -208,9 +256,11 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 - Created by me. <a
-                href="https://github.com/sabvillainy/sabvillainy.github.io">Here</a> is the repository.</p>
+        <p>&copy; 2024 - Created by me. <a href="https://github.com/sabvillainy/sabvillainy.github.io">Here</a> is the
+            repository.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
