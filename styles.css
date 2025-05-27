@@ -135,6 +135,31 @@ body {
     text-decoration: underline;
 }
 
+
+[data-theme="light"] .project-links a:hover {
+    color: #fff !important;
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+[data-theme="light"] .project-links a:hover i {
+    color: #fff !important;
+}
+
+[data-theme="light"] .project-links a.demo-link {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+[data-theme="light"] .project-links a.demo-link:hover {
+    background: var(--secondary-color);
+    color: #fff !important;
+}
+
+[data-theme="light"] .project-links a.demo-link:hover i {
+    color: #fff !important;
+}
+
 section {
     padding: 4% 7% 5% 7%;
     margin-bottom: 20px;
@@ -469,6 +494,17 @@ footer a {
     transform: translateY(-2px);
 }
 
+[data-theme="light"] .tech-tag {
+    background: rgba(88, 79, 99, 0.1);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+[data-theme="light"] .tech-tag:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
 .project-links {
     margin-top: auto;
     display: flex;
@@ -534,8 +570,8 @@ footer a {
 
 .projects-footer a {
     color: var(--secondary-color);
-    text-decoration: none;
     transition: color 0.3s ease;
+    text-decoration: underline;
 }
 
 .projects-footer a:hover {
