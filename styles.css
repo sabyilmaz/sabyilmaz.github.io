@@ -27,7 +27,7 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
-    margin-right: 14%;
+    margin-right: 13%;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -73,6 +73,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     transition: background-color 0.3s, color 0.3s;
+    width: calc(100% - 200px - 13%);
 }
 
 .content h1 {
@@ -88,9 +89,10 @@ body {
 }
 
 .gif-container {
-    margin-left: 14%;
+    margin-left: 200px;
     height: 100vh;
     overflow: hidden;
+    width: calc(100% - 200px - 13%);
 }
 
 .gif-container img {
@@ -173,9 +175,9 @@ footer {
     text-align: center;
     justify-content: center;
     padding: 10px 0;
-    margin-left: 8%;
+    margin-left: 200px;
     color: slategray;
-    width: 100%;
+    width: calc(100% - 200px - 13%);
     bottom: 0;
 }
 
@@ -333,7 +335,7 @@ footer a {
 
     .gif-container {
         margin-left: 0;
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
@@ -482,7 +484,7 @@ footer a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border: 1px solid var(--secondary-color);
     border-radius: 20px;
     transition: all 0.3s ease;
