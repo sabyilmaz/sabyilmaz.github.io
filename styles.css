@@ -589,3 +589,129 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-top: 20px;
+    opacity: 0.8;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+.code-block {
+    flex: 1;
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    border: 1px solid var(--secondary-color);
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-block code {
+    color: #d4d4d4;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* VS Code-like syntax highlighting */
+.code-block .keyword {
+    color: #569CD6;
+}
+
+.code-block .variable {
+    color: #9CDCFE;
+}
+
+.code-block .property {
+    color: #9CDCFE;
+}
+
+.code-block .string {
+    color: #CE9178;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .code-block {
+        width: 100%;
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+    .code-block pre {
+        text-align: left;
+    }
+
+    .code-block code {
+        text-align: left;
+    }
+
+    .hero-description {
+        font-size: 1em;
+        padding: 0 20px;
+    }
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about h1 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
