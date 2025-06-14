@@ -617,17 +617,33 @@ footer a {
 }
 
 .hero-text h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     margin: 0;
-    color: var(--secondary-color);
+    color: var(--text-color);
     line-height: 1.2;
 }
 
+.hero-text .highlight {
+    color: var(--secondary-color);
+}
+
+.hero-text .text-white {
+    color: var(--text-color);
+}
+
 .hero-subtitle {
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--text-color);
     margin-top: 10px;
     font-weight: 500;
+}
+
+.hero-specialization {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-top: 15px;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .hero-description {
@@ -637,6 +653,24 @@ footer a {
     opacity: 0.8;
     max-width: 600px;
     font-weight: 300;
+    font-style: italic;
+}
+
+.hero-social {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-social .social-link {
+    color: var(--text-color);
+    font-size: 1.8em;
+    transition: all 0.3s ease;
+}
+
+.hero-social .social-link:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 .code-block {
@@ -705,6 +739,10 @@ footer a {
         font-size: 1em;
         padding: 0 20px;
     }
+
+    .hero-social {
+        justify-content: center;
+    }
 }
 
 #about p {
@@ -716,4 +754,34 @@ footer a {
 #about h1 {
     font-size: 2em;
     margin-bottom: 30px;
+}
+
+.typewriter-container {
+    min-height: 2em;
+    margin: 15px 0;
+}
+
+.typewriter-text {
+    font-size: 1.3em;
+    color: var(--text-color);
+    font-weight: 400;
+    opacity: 0.9;
+    border-right: 2px solid var(--secondary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--secondary-color)
+    }
 }

@@ -38,4 +38,44 @@ function applyTheme() {
 }
 
 // Apply theme when the page loads
-document.addEventListener('DOMContentLoaded', applyTheme); 
+document.addEventListener('DOMContentLoaded', applyTheme);
+
+const typewriterText = document.getElementById('typewriter');
+const texts = [
+    "Specialized in Web & Backend Development",
+    "Passionate about Machine Learning"
+];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingDelay = 100;
+let erasingDelay = 50;
+let newTextDelay = 2000;
+
+function type() {
+    const currentText = texts[textIndex];
+
+    if (isDeleting) {
+        typewriterText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typingDelay = erasingDelay;
+    } else {
+        typewriterText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 100;
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        typingDelay = newTextDelay;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typingDelay = 500;
+    }
+
+    setTimeout(type, typingDelay);
+}
+
+// Start the typewriter effect when the page loads
+document.addEventListener('DOMContentLoaded', type); 
