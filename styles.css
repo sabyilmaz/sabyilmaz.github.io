@@ -642,6 +642,7 @@ footer a:hover {
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
+    transition: background-color 0.3s ease;
 }
 
 .hero-content {
@@ -652,10 +653,12 @@ footer a:hover {
     max-width: 1200px;
     padding: 0 40px;
     gap: 40px;
+    transition: all 0.3s ease;
 }
 
 .hero-text {
     flex: 1;
+    transition: all 0.3s ease;
 }
 
 .hero-text h1 {
@@ -663,14 +666,17 @@ footer a:hover {
     margin: 0;
     color: var(--text-color);
     line-height: 1.2;
+    transition: color 0.3s ease;
 }
 
 .hero-text .highlight {
     color: var(--secondary-color);
+    transition: color 0.3s ease;
 }
 
 .hero-text .text-white {
     color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .hero-subtitle {
@@ -678,6 +684,7 @@ footer a:hover {
     color: var(--text-color);
     margin-top: 10px;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .hero-specialization {
@@ -686,6 +693,7 @@ footer a:hover {
     margin-top: 15px;
     font-weight: 400;
     opacity: 0.9;
+    transition: color 0.3s ease;
 }
 
 .hero-description {
@@ -696,12 +704,14 @@ footer a:hover {
     max-width: 600px;
     font-weight: 300;
     font-style: italic;
+    transition: color 0.3s ease;
 }
 
 .hero-social {
     margin-top: 30px;
     display: flex;
     gap: 20px;
+    transition: all 0.3s ease;
 }
 
 .hero-social .social-link {
@@ -801,6 +811,7 @@ footer a:hover {
 .typewriter-container {
     min-height: 2em;
     margin: 15px 0;
+    transition: all 0.3s ease;
 }
 
 .typewriter-text {
@@ -814,6 +825,7 @@ footer a:hover {
     margin: 0;
     display: inline-block;
     animation: blink-caret 0.75s step-end infinite;
+    transition: color 0.3s ease;
 }
 
 @keyframes blink-caret {
