@@ -574,9 +574,9 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 16px;
+    padding: 8px 16px;
     border: 1px solid var(--secondary-color);
-    border-radius: 20px;
+    border-radius: 4px;
     transition: all 0.3s ease;
     background: transparent;
     font-weight: 500;
@@ -584,36 +584,31 @@ footer a:hover {
     justify-content: center;
     white-space: nowrap;
     flex: 1;
-    max-width: 200px;
+    max-width: 160px;
 }
 
 .project-links a:hover {
     background: var(--secondary-color);
-    color: #000 !important;
     transform: translateY(-2px);
+}
+
+.project-links a:hover,
+.project-links a:hover * {
+    color: #1a1a1a !important;
 }
 
 .project-links a i {
     font-size: 1.1em;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .project-links a:hover i {
-    color: #000;
+    transform: translateX(2px);
 }
 
-.project-links a.demo-link {
-    background: transparent;
-    color: var(--secondary-color);
-}
-
-.project-links a.demo-link:hover {
-    background: var(--secondary-color);
-    color: #000 !important;
-}
-
-.project-links a.demo-link:hover i {
-    color: #000;
+[data-theme="light"] .project-links a:hover,
+[data-theme="light"] .project-links a:hover * {
+    color: #fff !important;
 }
 
 .projects-footer {
@@ -635,10 +630,6 @@ footer a:hover {
 }
 
 @media (max-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .project-links {
         flex-direction: column;
         align-items: center;
@@ -647,22 +638,18 @@ footer a:hover {
 
     .project-links a {
         width: 100%;
-        max-width: 180px;
+        max-width: 160px;
     }
 }
 
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .project-links {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     .project-links a {
-        max-width: 150px;
+        max-width: 140px;
     }
 }
 
@@ -1013,5 +1000,247 @@ footer a:hover {
     .skills-container {
         grid-template-columns: 1fr;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .project-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .project-content {
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .project-title {
+        font-size: 1.2em;
+        min-height: 2.4em;
+    }
+
+    .project-description {
+        font-size: 0.9em;
+        min-height: 4em;
+    }
+
+    .project-tech {
+        gap: 6px;
+    }
+
+    .tech-tag {
+        font-size: 0.75em;
+        padding: 4px 10px;
+    }
+
+    .project-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .project-links a {
+        max-width: 140px;
+        font-size: 0.9em;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        gap: 15px;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-title {
+        font-size: 1.1em;
+        min-height: 2.2em;
+    }
+
+    .project-description {
+        font-size: 0.85em;
+        min-height: 3.8em;
+    }
+
+    .tech-tag {
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+
+    .project-links {
+        gap: 8px;
+    }
+
+    .project-links a {
+        max-width: 130px;
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    left: 50%;
+    top: 0;
+    margin-left: -8px;
+    z-index: 1;
+}
+
+.timeline-content {
+    position: relative;
+    width: calc(50% - 40px);
+    padding: 20px;
+    background: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 40px);
+}
+
+.timeline-date {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    border: 1px solid var(--secondary-color);
+}
+
+.timeline-content h3 {
+    color: var(--secondary-color);
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.timeline-content h4 {
+    color: var(--text-color);
+    margin: 0 0 15px 0;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 80px);
+        left: 80px !important;
+    }
+
+    .timeline-date {
+        left: 30px;
+        transform: none;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        left: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding: 10px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        left: 60px !important;
+        padding: 15px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        left: 60px !important;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1em;
+    }
+
+    .timeline-content h4 {
+        font-size: 0.9em;
+    }
+
+    .timeline-content p {
+        font-size: 0.9em;
     }
 }
