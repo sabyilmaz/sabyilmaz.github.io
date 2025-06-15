@@ -461,6 +461,7 @@ footer a:hover {
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
+    height: 100%;
 }
 
 [data-theme="light"] .project-card {
@@ -492,8 +493,9 @@ footer a:hover {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     height: 100%;
+    flex: 1;
 }
 
 .project-title {
@@ -502,6 +504,10 @@ footer a:hover {
     margin: 0;
     font-weight: 600;
     text-align: center;
+    min-height: 2.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-description {
@@ -511,6 +517,7 @@ footer a:hover {
     margin: 0;
     text-align: center;
     flex-grow: 1;
+    min-height: 4.5em;
 }
 
 .project-tech {
@@ -520,6 +527,7 @@ footer a:hover {
     margin: 0;
     justify-content: center;
     align-items: flex-start;
+    min-height: 2.5em;
 }
 
 .tech-tag {
@@ -530,6 +538,7 @@ footer a:hover {
     font-size: 0.8em;
     border: 1px solid var(--secondary-color);
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .tech-tag:hover {
@@ -550,11 +559,12 @@ footer a:hover {
 }
 
 .project-links {
-    margin-top: 10px;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    min-height: 3.5em;
 }
 
 .project-links a {
@@ -573,6 +583,8 @@ footer a:hover {
     min-width: 120px;
     justify-content: center;
     white-space: nowrap;
+    flex: 1;
+    max-width: 200px;
 }
 
 .project-links a:hover {
@@ -626,11 +638,31 @@ footer a:hover {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        max-width: 180px;
+    }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project-links a {
+        max-width: 150px;
     }
 }
 
@@ -667,6 +699,7 @@ footer a:hover {
     color: var(--text-color);
     line-height: 1.2;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .hero-text .highlight {
@@ -762,6 +795,18 @@ footer a:hover {
     color: #CE9178;
 }
 
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3em;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
@@ -771,6 +816,7 @@ footer a:hover {
 
     .hero-text h1 {
         font-size: 2.5em;
+        white-space: normal;
     }
 
     .code-block {
