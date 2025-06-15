@@ -802,7 +802,6 @@ footer a {
     background: var(--background-color);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     height: 100%;
@@ -810,12 +809,15 @@ footer a {
 
 .skills-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(219, 165, 94, 0.2);
     border-color: var(--secondary-color);
 }
 
+[data-theme="light"] .skills-category {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 [data-theme="light"] .skills-category:hover {
-    box-shadow: 0 8px 25px rgba(88, 79, 99, 0.2);
+    border-color: var(--secondary-color);
 }
 
 .skills-category h2 {
