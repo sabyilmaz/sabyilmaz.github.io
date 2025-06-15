@@ -198,16 +198,58 @@ td {
 
 footer {
     text-align: center;
-    justify-content: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-left: 200px;
-    color: slategray;
-    width: calc(100% - 200px - 13%);
-    bottom: 0;
+    width: calc(100% - 200px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+[data-theme="light"] footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
 }
 
 footer a {
     color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--text-color);
+    font-size: 1.8em;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
 }
 
 #theme-toggle {
@@ -244,7 +286,7 @@ footer a {
     body {
         margin: 0;
         padding: 0;
-        width: 100vw;
+        width: 100%;
         overflow-x: hidden;
     }
 
@@ -332,20 +374,6 @@ footer a {
         padding: 12px 10px;
     }
 
-    footer {
-        width: 100%;
-        margin: 0;
-        padding: 15px 10px;
-    }
-
-    footer p {
-        width: 100%;
-        margin: 0;
-        padding: 0 10px;
-        text-align: center;
-        line-height: 1.5;
-    }
-
     .sidebar nav ul li {
         margin: 5px 0;
         display: flex;
@@ -364,43 +392,55 @@ footer a {
         height: auto;
     }
 
-    table {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .code-block {
+        width: 100%;
+        font-size: 0.9em;
+        text-align: left;
+        overflow-x: auto;
+    }
+
+    .hero-description {
+        font-size: 1em;
+        padding: 0 20px;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .skills-category {
         width: 100%;
     }
 
-    table,
-    th,
-    td {
-        font-size: 12px;
-        word-wrap: break-word;
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
     }
 
-    table thead {
-        display: none;
+    .skill-item {
+        max-width: 120px;
     }
 
-    table tr {
-        display: block;
-        margin-bottom: 10px;
-        width: auto;
-    }
-
-    table td {
-        display: block;
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-        white-space: pre-wrap;
-    }
-
-    table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 10px;
-        font-weight: bold;
-        text-align: left;
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
     }
 }
 
@@ -666,7 +706,7 @@ footer a {
 
 .hero-social .social-link {
     color: var(--text-color);
-    font-size: 1.8em;
+    font-size: 2.2em;
     transition: all 0.3s ease;
 }
 
